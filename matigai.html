@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+  <head>
+    <title>2D Map with Character Movement</title>
+  </head>
+  <body>
+    <div id="press">ここでWを押してください</div>
+    <table>
+      <tbody>
+        <tr>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>0</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>W</td>
+          <td>E</td>
+          <td>R</td>
+        </tr>
+        <tr>
+          <td>S</td>
+          <td>D</td>
+          <td>F</td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td>C</td>
+          <td>V</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Z</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="test.html">test</a>
+  </body>
+  <script>
+    const num = [];
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "w") {
+        console.log("Wが押されました！");
+        num.push(7);
+      //   } elseif(event.key === "e") {
+      //     num.push(8);
+      // };
+      };
+    );
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "e") {
+        console.log("eが押されました！");
+        num.push(8);
+        }
+      };
+    );
+
+    // function pressKey(key, arr) {
+    //       	switch (key) {
+    //          		case "W":
+    //          			arr.push(7);
+    //          			break;
+    //          		case "E":
+    //          			arr.push(8);
+    //          			break;
+    //          		case "R":
+    //          			arr.push(9):
+    //       			break;
+    //       		case "S":
+    //       			arr.push(4);
+    //       			break;
+    //       		case "D":
+    //       			arr.push(5);
+    //       			break;
+    //       		case "F":
+    //       			arr.push(6);
+    //       			break;
+    //       		case "X":
+    //       			arr.push(1);
+    //       			break;
+    //       		case "C":
+    //       			arr.push(2);
+    //       			break;
+    //       		case "V":
+    //       			arr.push(3);
+    //       			break;
+    //       		case "Z":
+    //       			arr.push(0);
+    //       			break;
+    //       			default
+    //       			break;
+    //          	}
+    // }
+    // const num = [];
+    // pressKey('W', num)
+    // pressKey('E', num)
+    // console.log(num)
+  </script>
+</html>

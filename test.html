@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>電卓アプリ</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="inputBox" readonly />
+    </div>
+    <div>
+      <button onclick="inputKey('7')">7 (W)</button>
+      <button onclick="inputKey('8')">8 (E)</button>
+      <button onclick="inputKey('9')">9 (R)</button>
+      <button onclick="inputKey('4')">4 (S)</button>
+      <button onclick="inputKey('5')">5 (D)</button>
+      <button onclick="inputKey('6')">6 (F)</button>
+      <button onclick="inputKey('1')">1 (X)</button>
+      <button onclick="inputKey('2')">2 (C)</button>
+      <button onclick="inputKey('3')">3 (V)</button>
+      <button onclick="inputKey('+')">+ (U)</button>
+      <button onclick="inputKey('-')">- (J)</button>
+      <button onclick="inputKey('*')">*</button>
+      <button onclick="inputKey('/')">/ (M)</button>
+      <button onclick="calculate()">= (enter)</button>
+    </div>
+    <script>
+      let input = "";
+
+      function inputKey(key) {
+        const inputBox = document.getElementById("inputBox");
+        input += key;
+        inputBox.value = input;
+      }
+
+      function calculate() {
+        const inputBox = document.getElementById("inputBox");
+        const result = eval(input);
+        inputBox.value = result;
+        input = result.toString();
+      }
+    </script>
+  </body>
+</html>

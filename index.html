@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+  <head>
+    <title>2D Map with Character Movement</title>
+  </head>
+  <body>
+    <input type="text" id="inputBox" readonly />
+    <table>
+      <tbody>
+        <tr>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>0</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>W</td>
+          <td>E</td>
+          <td>R</td>
+        </tr>
+        <tr>
+          <td>S</td>
+          <td>D</td>
+          <td>F</td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td>C</td>
+          <td>V</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Z</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="test.html">test</a>
+  </body>
+  <script>
+    let input = "";
+
+    document.addEventListener("keydown", function (event) {
+      const inputBox = document.getElementById("inputBox");
+      switch (event.code) {
+        case "KeyW":
+          input += "7";
+          inputBox.value = input;
+          break;
+        case "KeyE":
+          input += "8";
+          inputBox.value = input;
+          break;
+        case "KeyR":
+          input += "9";
+          inputBox.value = input;
+          break;
+        case "KeyS":
+          input += "4";
+          inputBox.value = input;
+          break;
+        case "KeyD":
+          input += "5";
+          inputBox.value = input;
+          break;
+        case "KeyF":
+          input += "6";
+          inputBox.value = input;
+          break;
+        case "KeyX":
+          input += "1";
+          inputBox.value = input;
+          break;
+        case "KeyC":
+          input += "2";
+          inputBox.value = input;
+          break;
+        case "KeyV":
+          input += "3";
+          inputBox.value = input;
+          break;
+        case "keyZ":
+          input += "0";
+          inputBox.value = input;
+          break;
+        case "KeyU":
+          input += "+";
+          inputBox.value = input;
+          break;
+        case "KeyJ":
+          input += "-";
+          inputBox.value = input;
+          break;
+        case "KeyN":
+          input += "*";
+          inputBox.value = input;
+          break;
+        case "keyM":
+          input += "/";
+          inputBox.value = input;
+          break;
+        case "keyY":
+          input = "";
+          inputBox.value = "";
+          break;
+        case "Enter":
+          calculate();
+          break;
+        default:
+          break;
+      }
+    });
+
+    function calculate() {
+      const inputBox = document.getElementById("inputBox");
+      const result = eval(input);
+      inputBox.value = result;
+      input = result.toString();
+    }
+  </script>
+</html>
